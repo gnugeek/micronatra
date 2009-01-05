@@ -64,7 +64,8 @@ __END__
     #nav 
       %a{:href=>("/")}= "home"
       %a{:href=>("/logout" )}= "logout"
-    = yield
+    #content
+      = yield
 
 @@index
 #content
@@ -84,5 +85,9 @@ __END__
 
 #banner
   :height 20px
-  :background #aab
   :text-align left
+  
+body
+  :font-family arial
+
+  
