@@ -8,6 +8,10 @@ class Micronatra < Sinatra::Base
   set :Root, File.dirname(__FILE__) 
   use_in_file_templates!
 
+  use Rack::Lint
+  set :logging, true # use Rack::CommonLogger
+  set :sessions, true # use Rack::Session::Cookie
+
   get '/' do
     haml :index
   end
